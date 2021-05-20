@@ -1,3 +1,12 @@
+module "network" {
+    source = "app.terraform.io/Jens690-training/network/google"
+    version = "2.5.0"
+    network_name = "testii-net"
+    project_id= var.project
+
+
+
+
 subnets = [
   {
     subnet_name   = "gaurav-subnet"
@@ -5,3 +14,4 @@ subnets = [
     subnet_region = var.region
   }
 ]
+}
